@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-page="videos">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos — Monzer Aziz</title>
+  <meta name="description" content="Video production, motion graphics, and filming by Monzer Aziz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <div class="page-transition" aria-hidden="true">
+    <div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div>
+  </div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-text"></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><span class="logo-m">M</span><span class="logo-dot">.</span></a>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="webapps.html" class="nav-link" data-i18n="nav.webapps">Web Apps</a>
+      <a href="websites.html" class="nav-link" data-i18n="nav.websites">Websites</a>
+      <a href="videos.html" class="nav-link active" data-i18n="nav.videos">Videos</a>
+      <a href="automation.html" class="nav-link" data-i18n="nav.automation">Automation</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn" aria-label="Toggle language">
+        <span class="lang-opt active" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span>
+      </button>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="webapps.html" data-i18n="nav.webapps">Web Apps</a>
+    <a href="websites.html" data-i18n="nav.websites">Websites</a>
+    <a href="videos.html" data-i18n="nav.videos">Videos</a>
+    <a href="automation.html" data-i18n="nav.automation">Automation</a>
+  </div>
+
+  <!-- PAGE HERO — CINEMATIC FILM REEL -->
+  <header class="page-hero cinema-theme">
+    <canvas id="film-canvas" aria-hidden="true"></canvas>
+    <div class="cinema-grain" aria-hidden="true"></div>
+    <div class="cinema-vignette" aria-hidden="true"></div>
+    <div class="cinema-scanlines" aria-hidden="true"></div>
+
+    <div class="cinema-bars">
+      <div class="cinema-bar top"></div>
+      <div class="cinema-bar bottom"></div>
+    </div>
+
+    <div class="page-hero-content">
+      <span class="page-hero-label cinema-label">
+        <span class="rec-dot"></span>
+        <span>REC</span>
+        <span class="cinema-timecode-inline" aria-hidden="true">00:00:00:00</span>
+      </span>
+      <h1 class="page-hero-title cinema-text">
+        <span data-i18n="videos.hero">Frame by Frame</span>
+      </h1>
+      <p class="page-hero-sub" data-i18n="videos.herosub">Motion graphics, filming, editing — telling stories that move.</p>
+      <div class="cinema-tools-row" aria-hidden="true">
+        <span class="ct"><i class="fas fa-video"></i></span>
+        <span class="ct"><i class="fas fa-cut"></i></span>
+        <span class="ct"><i class="fas fa-magic"></i></span>
+        <span class="ct"><i class="fas fa-film"></i></span>
+      </div>
+    </div>
+    <div class="cinema-timecode" aria-hidden="true">00:00:00:00</div>
+
+    <!-- Film strip edges -->
+    <div class="film-strip film-strip-left" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="film-strip film-strip-right" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- VIDEOS CONTENT -->
+  <section class="video-section">
+    <div class="container">
+      <div class="video-intro reveal-up">
+        <h2 data-i18n="videos.intro.title">Video Production</h2>
+        <p data-i18n="videos.intro.desc">From concept to final cut — I handle the full video production pipeline. Lecture recordings, promotional content, tutorials, and motion graphics. Using Adobe Premiere Pro, After Effects, and professional camera equipment to deliver high-quality content every time.</p>
+      </div>
+
+      <div class="video-capabilities">
+        <div class="vid-cap reveal-up">
+          <div class="vid-cap-icon"><i class="fas fa-video"></i></div>
+          <h3 data-i18n="videos.cap1.title">Filming</h3>
+          <p data-i18n="videos.cap1.desc">Professional camera operation for lectures, events, and studio productions. Multi-camera setups, lighting design, and live direction.</p>
+        </div>
+        <div class="vid-cap reveal-up">
+          <div class="vid-cap-icon"><i class="fas fa-cut"></i></div>
+          <h3 data-i18n="videos.cap2.title">Editing</h3>
+          <p data-i18n="videos.cap2.desc">Full post-production in Premiere Pro — cuts, color grading, audio mixing, graphics overlays. From raw footage to polished final product.</p>
+        </div>
+        <div class="vid-cap reveal-up">
+          <div class="vid-cap-icon"><i class="fas fa-magic"></i></div>
+          <h3 data-i18n="videos.cap3.title">Motion Graphics</h3>
+          <p data-i18n="videos.cap3.desc">After Effects animations — title sequences, explainer graphics, data visualizations, and branded intros/outros for educational content.</p>
+        </div>
+        <div class="vid-cap reveal-up">
+          <div class="vid-cap-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3 data-i18n="videos.cap4.title">Educational Content</h3>
+          <p data-i18n="videos.cap4.desc">Designing and producing digital learning materials — screen recordings, instructional videos, and interactive content for Moodle LMS.</p>
+        </div>
+      </div>
+
+      <div class="video-tools reveal-up">
+        <h3 data-i18n="videos.tools">Tools I Use</h3>
+        <div class="tool-pills">
+          <span>Adobe Premiere Pro</span>
+          <span>Adobe After Effects</span>
+          <span>Adobe Illustrator</span>
+          <span>Adobe Photoshop</span>
+          <span>Camera Operation</span>
+          <span>Articulate Rise</span>
+          <span>Moodle LMS</span>
+        </div>
+      </div>
+
+      <div class="video-cta reveal-up">
+        <p data-i18n="videos.cta">Video samples and showreel coming soon. In the meantime, feel free to reach out to see selected work.</p>
+        <a href="index.html#contact" class="cta-link magnetic">
+          <span data-i18n="videos.contact">Get in Touch</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Monzer Aziz</span>
+      <div class="footer-links"><a href="mailto:monzeraziz01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js?v=3"></script>
+  <script src="js/core.js?v=3"></script>
+  <script src="js/pages.js?v=3"></script>
+</body>
+</html>

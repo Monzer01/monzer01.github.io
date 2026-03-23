@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-page="webapps">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Apps — Monzer Aziz</title>
+  <meta name="description" content="Web applications built by Monzer Aziz — gamification platforms, dashboards, AI-powered tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css?v=3">
+  <link rel="stylesheet" href="css/pages.css?v=3">
+</head>
+<body>
+
+  <div class="page-transition" aria-hidden="true">
+    <div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div>
+  </div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-text"></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><span class="logo-m">M</span><span class="logo-dot">.</span></a>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="webapps.html" class="nav-link active" data-i18n="nav.webapps">Web Apps</a>
+      <a href="websites.html" class="nav-link" data-i18n="nav.websites">Websites</a>
+      <a href="videos.html" class="nav-link" data-i18n="nav.videos">Videos</a>
+      <a href="automation.html" class="nav-link" data-i18n="nav.automation">Automation</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn" aria-label="Toggle language">
+        <span class="lang-opt active" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span>
+      </button>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="webapps.html" data-i18n="nav.webapps">Web Apps</a>
+    <a href="websites.html" data-i18n="nav.websites">Websites</a>
+    <a href="videos.html" data-i18n="nav.videos">Videos</a>
+    <a href="automation.html" data-i18n="nav.automation">Automation</a>
+  </div>
+
+  <!-- PAGE HERO — NEURAL NETWORK -->
+  <header class="page-hero neon-theme">
+    <canvas id="neon-canvas" aria-hidden="true"></canvas>
+    <div class="page-hero-grid"></div>
+
+    <!-- Floating code symbols -->
+    <div class="neon-symbols" aria-hidden="true">
+      <span class="nsym nsym-1">&lt;/&gt;</span>
+      <span class="nsym nsym-2">{ }</span>
+      <span class="nsym nsym-3">( )</span>
+      <span class="nsym nsym-4">[ ]</span>
+      <span class="nsym nsym-5">fn()</span>
+      <span class="nsym nsym-6">=&gt;</span>
+    </div>
+
+    <div class="page-hero-content">
+      <span class="page-hero-label neon-label">
+        <span class="label-bracket">[</span>
+        <span data-i18n="nav.webapps">Web Apps</span>
+        <span class="label-bracket">]</span>
+      </span>
+      <h1 class="page-hero-title glitch" data-text="Building the Future">
+        <span data-i18n="webapps.hero">Building the Future</span>
+      </h1>
+      <p class="page-hero-sub" data-i18n="webapps.herosub">Full-stack applications with gamification, real-time data, and AI-powered features.</p>
+      <div class="neon-stats" aria-hidden="true">
+        <span class="neon-stat"><strong>3</strong> Live Apps</span>
+        <span class="neon-stat-sep">•</span>
+        <span class="neon-stat"><strong>1000+</strong> Users</span>
+        <span class="neon-stat-sep">•</span>
+        <span class="neon-stat"><strong>5</strong> Technologies</span>
+      </div>
+    </div>
+
+    <div class="hero-scan-line" aria-hidden="true"></div>
+  </header>
+
+  <!-- PROJECTS GRID -->
+  <section class="app-projects">
+    <div class="container">
+      <div class="app-projects-header reveal-up">
+        <span class="app-projects-eyebrow" data-i18n="webapps.eyebrow">Featured Projects</span>
+        <h2 class="app-projects-title" data-i18n="webapps.gridtitle">What I've Built</h2>
+      </div>
+
+      <div class="app-cards-grid">
+
+        <!-- Card 1: Ya Hablas -->
+        <a href="yahablas.html" class="app-card" data-color="neon" data-transit>
+          <div class="app-card-glow"></div>
+          <div class="app-card-border"></div>
+          <div class="app-card-inner">
+            <div class="app-card-visual">
+              <img src="Assets/language app/Screenshot 2026-03-22 at 00.55.39.png" alt="Ya Hablas" loading="lazy">
+              <div class="app-card-overlay">
+                <span class="app-card-num">01</span>
+              </div>
+            </div>
+            <div class="app-card-content">
+              <div class="app-card-tags">
+                <span>Gamification</span><span>Education</span><span>Multi-lang</span>
+              </div>
+              <h3 class="app-card-title" data-i18n="projects.p1.title">Ya Hablas — Language Academy</h3>
+              <p class="app-card-desc" data-i18n="webapps.p1.short">A Duolingo-style language learning platform with XP, streaks, badges, leaderboard, and spaced repetition.</p>
+              <div class="app-card-footer">
+                <span class="app-card-cta" data-i18n="webapps.explore">Explore Project <i class="fas fa-arrow-right"></i></span>
+                <span class="app-card-live"><i class="fas fa-circle"></i> Live</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2: ZDF VMS -->
+        <a href="zdf-vms.html" class="app-card" data-color="cyan" data-transit>
+          <div class="app-card-glow"></div>
+          <div class="app-card-border"></div>
+          <div class="app-card-inner">
+            <div class="app-card-visual">
+              <img src="Assets/some of my work/ZDF/Bild.png" alt="ZDF VMS" loading="lazy">
+              <div class="app-card-overlay">
+                <span class="app-card-num">02</span>
+              </div>
+            </div>
+            <div class="app-card-content">
+              <div class="app-card-tags">
+                <span>Dashboard</span><span>Data</span><span>Panopto</span>
+              </div>
+              <h3 class="app-card-title" data-i18n="projects.p3.title">ZDF VMS — Recording Dashboard</h3>
+              <p class="app-card-desc" data-i18n="webapps.p3.short">A centralized recording management system with real-time status, filters, and Panopto/Moodle integration.</p>
+              <div class="app-card-footer">
+                <span class="app-card-cta" data-i18n="webapps.explore">Explore Project <i class="fas fa-arrow-right"></i></span>
+                <span class="app-card-internal"><i class="fas fa-lock"></i> Internal</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3: Smart Feedback -->
+        <a href="feedback.html" class="app-card" data-color="purple" data-transit>
+          <div class="app-card-glow"></div>
+          <div class="app-card-border"></div>
+          <div class="app-card-inner">
+            <div class="app-card-visual">
+              <img src="Assets/some of my work/formular app/Bild (8).png" alt="Smart Feedback" loading="lazy">
+              <div class="app-card-overlay">
+                <span class="app-card-num">03</span>
+              </div>
+            </div>
+            <div class="app-card-content">
+              <div class="app-card-tags">
+                <span>Voice AI</span><span>Smart Forms</span><span>Integration</span>
+              </div>
+              <h3 class="app-card-title" data-i18n="projects.p4.title">Smart Feedback System</h3>
+              <p class="app-card-desc" data-i18n="webapps.p4.short">An intelligent form with voice-to-text, pre-filled fields, and direct integration into the VMS dashboard.</p>
+              <div class="app-card-footer">
+                <span class="app-card-cta" data-i18n="webapps.explore">Explore Project <i class="fas fa-arrow-right"></i></span>
+                <span class="app-card-internal"><i class="fas fa-lock"></i> Internal</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Monzer Aziz</span>
+      <div class="footer-links">
+        <a href="mailto:monzeraziz01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js?v=3"></script>
+  <script src="js/core.js?v=3"></script>
+  <script src="js/pages.js?v=3"></script>
+</body>
+</html>

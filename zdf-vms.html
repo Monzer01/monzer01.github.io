@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-page="webapps">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZDF VMS — Monzer Aziz</title>
+  <meta name="description" content="ZDF VMS — a recording management dashboard by Monzer Aziz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css?v=3">
+  <link rel="stylesheet" href="css/pages.css?v=3">
+</head>
+<body>
+
+  <div class="page-transition" aria-hidden="true">
+    <div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div>
+  </div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-text"></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><span class="logo-m">M</span><span class="logo-dot">.</span></a>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="webapps.html" class="nav-link active" data-i18n="nav.webapps">Web Apps</a>
+      <a href="websites.html" class="nav-link" data-i18n="nav.websites">Websites</a>
+      <a href="videos.html" class="nav-link" data-i18n="nav.videos">Videos</a>
+      <a href="automation.html" class="nav-link" data-i18n="nav.automation">Automation</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn" aria-label="Toggle language">
+        <span class="lang-opt active" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span>
+      </button>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="webapps.html" data-i18n="nav.webapps">Web Apps</a>
+    <a href="websites.html" data-i18n="nav.websites">Websites</a>
+    <a href="videos.html" data-i18n="nav.videos">Videos</a>
+    <a href="automation.html" data-i18n="nav.automation">Automation</a>
+  </div>
+
+  <!-- PROJECT DETAIL HERO -->
+  <header class="detail-hero" data-color="cyan">
+    <canvas id="detail-canvas" aria-hidden="true"></canvas>
+    <div class="detail-hero-content">
+      <a href="webapps.html" class="detail-back magnetic" data-transit>
+        <i class="fas fa-arrow-left"></i>
+        <span data-i18n="detail.back">Back to Projects</span>
+      </a>
+      <div class="detail-hero-text">
+        <span class="detail-num">02</span>
+        <h1 class="detail-title" data-i18n="projects.p3.title">ZDF VMS — Recording Dashboard</h1>
+        <p class="detail-subtitle" data-i18n="zdfvms.subtitle">A centralized management system for hundreds of weekly lecture recordings</p>
+      </div>
+      <div class="detail-meta">
+        <div class="detail-meta-item">
+          <span class="detail-meta-label" data-i18n="detail.role">Role</span>
+          <span class="detail-meta-value" data-i18n="zdfvms.role">Full-Stack Developer</span>
+        </div>
+        <div class="detail-meta-item">
+          <span class="detail-meta-label" data-i18n="detail.year">Year</span>
+          <span class="detail-meta-value">2024</span>
+        </div>
+        <div class="detail-meta-item">
+          <span class="detail-meta-label" data-i18n="detail.status">Status</span>
+          <span class="detail-meta-value detail-status-internal"><i class="fas fa-lock"></i> Internal</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <section class="detail-hero-image">
+    <div class="container">
+      <div class="detail-browser-frame reveal-up">
+        <div class="browser-chrome">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+          <span class="browser-url">fom-vms.internal</span>
+        </div>
+        <div class="detail-browser-body">
+          <img src="Assets/some of my work/ZDF/Bild.png" alt="ZDF VMS Dashboard" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT INFO -->
+  <section class="detail-info">
+    <div class="container">
+      <div class="detail-info-grid">
+        <div class="detail-description reveal-up">
+          <h2 data-i18n="detail.about">About this Project</h2>
+          <p data-i18n="zdfvms.desc1">A centralized management system I built for FOM Hochschule to handle hundreds of weekly lecture recordings. The dashboard features three distinct views — main overview, recording detail (CMP), and room/studio detail (STM) — with advanced filtering by date, time, type, studio, and attendance status.</p>
+          <p data-i18n="zdfvms.desc2">It integrates with Panopto and Moodle, showing real-time recording status, documentation tracking, and feedback loop management. The system replaced manual spreadsheet workflows and dramatically reduced errors.</p>
+        </div>
+        <div class="detail-sidebar reveal-up">
+          <div class="detail-tech">
+            <h3 data-i18n="detail.stack">Tech Stack</h3>
+            <div class="detail-tech-pills">
+              <span>HTML / CSS / JS</span>
+              <span>Python</span>
+              <span>Panopto API</span>
+              <span>Moodle Integration</span>
+              <span>Data Filtering</span>
+              <span>Real-time Status</span>
+            </div>
+          </div>
+          <div class="detail-features">
+            <h3 data-i18n="detail.features">Key Features</h3>
+            <ul>
+              <li><i class="fas fa-th-large"></i> <span data-i18n="zdfvms.f1">3 distinct dashboard views</span></li>
+              <li><i class="fas fa-filter"></i> <span data-i18n="zdfvms.f2">Advanced multi-filter system</span></li>
+              <li><i class="fas fa-sync-alt"></i> <span data-i18n="zdfvms.f3">Real-time recording status</span></li>
+              <li><i class="fas fa-plug"></i> <span data-i18n="zdfvms.f4">Panopto & Moodle integration</span></li>
+              <li><i class="fas fa-file-alt"></i> <span data-i18n="zdfvms.f5">Documentation tracking</span></li>
+              <li><i class="fas fa-comment-dots"></i> <span data-i18n="zdfvms.f6">Feedback loop management</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOT GALLERY -->
+  <section class="detail-gallery">
+    <div class="container">
+      <h2 class="detail-gallery-title reveal-up" data-i18n="detail.screenshots">Screenshots</h2>
+      <div class="detail-gallery-grid detail-gallery-masonry">
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/some of my work/ZDF/Bild.png" alt="ZDF VMS — Main Overview" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap1">Main overview — all recordings at a glance</div>
+        </div>
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/some of my work/ZDF/Bild (1).png" alt="ZDF VMS — Recording Detail" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap2">Recording detail (CMP) — Panopto & Moodle info</div>
+        </div>
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/some of my work/ZDF/Bild (2).png" alt="ZDF VMS — Room Detail" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap3">Room & studio detail (STM) view</div>
+        </div>
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/some of my work/ZDF/Bild (3).png" alt="ZDF VMS — Filter System" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap4">Advanced filtering by date, studio, type</div>
+        </div>
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/some of my work/ZDF/Bild (4).png" alt="ZDF VMS — Status Tracking" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap5">Real-time status & documentation tracking</div>
+        </div>
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/some of my work/ZDF/Bild (5).png" alt="ZDF VMS — Feedback" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap6">Feedback loop integration</div>
+        </div>
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/some of my work/ZDF/Bild (6).png" alt="ZDF VMS — Extended View" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap7">Extended data view with full details</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="detail-next">
+    <div class="container">
+      <a href="feedback.html" class="detail-next-link magnetic" data-transit>
+        <span class="detail-next-label" data-i18n="detail.next">Next Project</span>
+        <span class="detail-next-title" data-i18n="projects.p4.title">Smart Feedback System</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Monzer Aziz</span>
+      <div class="footer-links">
+        <a href="mailto:monzeraziz01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js?v=3"></script>
+  <script src="js/core.js?v=3"></script>
+  <script src="js/pages.js?v=3"></script>
+</body>
+</html>

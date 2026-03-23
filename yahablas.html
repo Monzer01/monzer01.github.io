@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-page="webapps">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ya Hablas — Monzer Aziz</title>
+  <meta name="description" content="Ya Hablas — a gamified language learning platform by Monzer Aziz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css?v=3">
+  <link rel="stylesheet" href="css/pages.css?v=3">
+</head>
+<body>
+
+  <div class="page-transition" aria-hidden="true">
+    <div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div>
+  </div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-text"></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><span class="logo-m">M</span><span class="logo-dot">.</span></a>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="webapps.html" class="nav-link active" data-i18n="nav.webapps">Web Apps</a>
+      <a href="websites.html" class="nav-link" data-i18n="nav.websites">Websites</a>
+      <a href="videos.html" class="nav-link" data-i18n="nav.videos">Videos</a>
+      <a href="automation.html" class="nav-link" data-i18n="nav.automation">Automation</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn" aria-label="Toggle language">
+        <span class="lang-opt active" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span>
+      </button>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="webapps.html" data-i18n="nav.webapps">Web Apps</a>
+    <a href="websites.html" data-i18n="nav.websites">Websites</a>
+    <a href="videos.html" data-i18n="nav.videos">Videos</a>
+    <a href="automation.html" data-i18n="nav.automation">Automation</a>
+  </div>
+
+  <!-- PROJECT DETAIL HERO -->
+  <header class="detail-hero" data-color="neon">
+    <canvas id="detail-canvas" aria-hidden="true"></canvas>
+    <div class="detail-hero-content">
+      <a href="webapps.html" class="detail-back magnetic" data-transit>
+        <i class="fas fa-arrow-left"></i>
+        <span data-i18n="detail.back">Back to Projects</span>
+      </a>
+      <div class="detail-hero-text">
+        <span class="detail-num">01</span>
+        <h1 class="detail-title" data-i18n="projects.p1.title">Ya Hablas — Language Academy</h1>
+        <p class="detail-subtitle" data-i18n="yahablas.subtitle">A complete language learning ecosystem with Duolingo-style gamification</p>
+      </div>
+      <div class="detail-meta">
+        <div class="detail-meta-item">
+          <span class="detail-meta-label" data-i18n="detail.role">Role</span>
+          <span class="detail-meta-value" data-i18n="yahablas.role">Designer &amp; Developer</span>
+        </div>
+        <div class="detail-meta-item">
+          <span class="detail-meta-label" data-i18n="detail.year">Year</span>
+          <span class="detail-meta-value">2025</span>
+        </div>
+        <div class="detail-meta-item">
+          <span class="detail-meta-label" data-i18n="detail.status">Status</span>
+          <span class="detail-meta-value detail-status-live"><i class="fas fa-circle"></i> Live</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <section class="detail-hero-image">
+    <div class="container">
+      <div class="detail-browser-frame reveal-up">
+        <div class="browser-chrome">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+          <span class="browser-url">yahablasidiomas.com</span>
+        </div>
+        <div class="detail-browser-body">
+          <img src="Assets/language app/Screenshot 2026-03-22 at 00.55.39.png" alt="Ya Hablas Dashboard" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT INFO -->
+  <section class="detail-info">
+    <div class="container">
+      <div class="detail-info-grid">
+        <div class="detail-description reveal-up">
+          <h2 data-i18n="detail.about">About this Project</h2>
+          <p data-i18n="yahablas.desc1">A complete language learning ecosystem I designed and built from scratch. The platform features Duolingo-style gamification with XP progression, streak tracking, achievement badges, a competitive leaderboard, spaced repetition algorithms, daily challenges, and a personal word bank.</p>
+          <p data-i18n="yahablas.desc2">It supports multiple languages across different proficiency levels — from beginner to advanced. The interface adapts between Spanish and English, with a warm, encouraging UX designed to keep learners engaged.</p>
+        </div>
+        <div class="detail-sidebar reveal-up">
+          <div class="detail-tech">
+            <h3 data-i18n="detail.stack">Tech Stack</h3>
+            <div class="detail-tech-pills">
+              <span>HTML / CSS / JS</span>
+              <span>Webflow</span>
+              <span>Gamification API</span>
+              <span>Spaced Repetition</span>
+              <span>Multi-language</span>
+              <span>Responsive Design</span>
+            </div>
+          </div>
+          <div class="detail-features">
+            <h3 data-i18n="detail.features">Key Features</h3>
+            <ul>
+              <li><i class="fas fa-trophy"></i> <span data-i18n="yahablas.f1">XP, levels, badges & streaks</span></li>
+              <li><i class="fas fa-chart-line"></i> <span data-i18n="yahablas.f2">Leaderboard & competition</span></li>
+              <li><i class="fas fa-brain"></i> <span data-i18n="yahablas.f3">Spaced repetition algorithm</span></li>
+              <li><i class="fas fa-bolt"></i> <span data-i18n="yahablas.f4">Daily challenges</span></li>
+              <li><i class="fas fa-book"></i> <span data-i18n="yahablas.f5">Personal word bank</span></li>
+              <li><i class="fas fa-language"></i> <span data-i18n="yahablas.f6">Multi-language support</span></li>
+            </ul>
+          </div>
+          <a href="https://www.yahablasidiomas.com/en-home" target="_blank" rel="noopener" class="detail-live-btn magnetic">
+            <span data-i18n="yahablas.try">Try Ya Hablas</span>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOT GALLERY -->
+  <section class="detail-gallery">
+    <div class="container">
+      <h2 class="detail-gallery-title reveal-up" data-i18n="detail.screenshots">Screenshots</h2>
+      <div class="detail-gallery-grid">
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/language app/Screenshot 2026-03-22 at 00.55.39.png" alt="Ya Hablas — Student Dashboard" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="webapps.cap1">Student dashboard — Master level, badges unlocked</div>
+        </div>
+        <div class="detail-gallery-item reveal-up">
+          <img src="Assets/language app/Screenshot 2026-03-22 at 00.54.02.png" alt="Ya Hablas — Spanish Interface" loading="lazy">
+          <div class="detail-gallery-caption" data-i18n="webapps.cap2">Spanish interface — units, exercises, daily challenge</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <section class="detail-next">
+    <div class="container">
+      <a href="zdf-vms.html" class="detail-next-link magnetic" data-transit>
+        <span class="detail-next-label" data-i18n="detail.next">Next Project</span>
+        <span class="detail-next-title" data-i18n="projects.p3.title">ZDF VMS — Recording Dashboard</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Monzer Aziz</span>
+      <div class="footer-links">
+        <a href="mailto:monzeraziz01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js?v=3"></script>
+  <script src="js/core.js?v=3"></script>
+  <script src="js/pages.js?v=3"></script>
+</body>
+</html>

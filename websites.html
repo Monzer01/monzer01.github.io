@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-page="websites">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Websites — Monzer Aziz</title>
+  <meta name="description" content="Websites designed and developed by Monzer Aziz — clean, modern, responsive.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <div class="page-transition" aria-hidden="true">
+    <div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div><div class="transition-slice"></div>
+  </div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-text"></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><span class="logo-m">M</span><span class="logo-dot">.</span></a>
+    <div class="nav-center">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="webapps.html" class="nav-link" data-i18n="nav.webapps">Web Apps</a>
+      <a href="websites.html" class="nav-link active" data-i18n="nav.websites">Websites</a>
+      <a href="videos.html" class="nav-link" data-i18n="nav.videos">Videos</a>
+      <a href="automation.html" class="nav-link" data-i18n="nav.automation">Automation</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn" aria-label="Toggle language">
+        <span class="lang-opt active" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span>
+      </button>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="webapps.html" data-i18n="nav.webapps">Web Apps</a>
+    <a href="websites.html" data-i18n="nav.websites">Websites</a>
+    <a href="videos.html" data-i18n="nav.videos">Videos</a>
+    <a href="automation.html" data-i18n="nav.automation">Automation</a>
+  </div>
+
+  <!-- PAGE HERO — LIQUID WAVES -->
+  <header class="page-hero mint-theme">
+    <canvas id="wave-canvas" aria-hidden="true"></canvas>
+    <div class="page-hero-dots"></div>
+
+    <!-- Floating browser windows -->
+    <div class="floating-browsers" aria-hidden="true">
+      <div class="float-browser fb-1">
+        <div class="fb-bar"><span></span><span></span><span></span></div>
+        <div class="fb-body"></div>
+      </div>
+      <div class="float-browser fb-2">
+        <div class="fb-bar"><span></span><span></span><span></span></div>
+        <div class="fb-body"></div>
+      </div>
+      <div class="float-browser fb-3">
+        <div class="fb-bar"><span></span><span></span><span></span></div>
+        <div class="fb-body"></div>
+      </div>
+    </div>
+
+    <div class="page-hero-content">
+      <span class="page-hero-label mint-label">
+        <span class="label-line"></span>
+        <span data-i18n="nav.websites">Websites</span>
+        <span class="label-line"></span>
+      </span>
+      <h1 class="page-hero-title elegant-reveal">
+        <span data-i18n="websites.hero">Crafted with Care</span>
+      </h1>
+      <p class="page-hero-sub" data-i18n="websites.herosub">Clean, modern, and responsive — designed for real businesses with real users.</p>
+      <div class="mint-cursor-trail" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <!-- PROJECT: Pine-MD -->
+  <section class="project-showcase" data-accent="mint">
+    <div class="container">
+      <div class="showcase-header reveal-up">
+        <span class="showcase-num">01</span>
+        <div>
+          <h2 data-i18n="projects.p2.title">Pine-MD — Medical Practice</h2>
+          <p class="showcase-sub" data-i18n="websites.p2.long">A professional website for a medical practice, designed to convey trust and competence from the very first impression. Clean typography, calming color palette, and a layout that puts patient needs front and center. The responsive design works seamlessly across devices, with clear service presentation, contact information always within reach, and accessibility at its core.</p>
+        </div>
+      </div>
+
+      <div class="showcase-tags reveal-up">
+        <span>Website</span><span>Healthcare</span><span>Web Design</span><span>Responsive</span><span>Accessibility</span>
+      </div>
+
+      <a href="https://www.pine-md.de/" target="_blank" rel="noopener" class="showcase-link reveal-up magnetic">
+        <span data-i18n="projects.viewlive">View Live</span>
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+
+      <div class="showcase-gallery">
+        <div class="gallery-item gallery-item--browser reveal-up">
+          <div class="browser-chrome">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+            <span class="browser-url">pine-md.de</span>
+          </div>
+          <div class="browser-body mint-placeholder">
+            <div class="mint-placeholder-inner">
+              <i class="fas fa-stethoscope"></i>
+              <span>pine-md.de</span>
+              <p data-i18n="websites.visit">Visit the live site to see the full design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT: Old Portfolio -->
+  <section class="project-showcase" data-accent="lavender">
+    <div class="container">
+      <div class="showcase-header reveal-up">
+        <span class="showcase-num">02</span>
+        <div>
+          <h2 data-i18n="websites.portfolio.title">Personal Portfolio (Webflow)</h2>
+          <p class="showcase-sub" data-i18n="websites.portfolio.desc">My earlier portfolio, built with Webflow — showcasing web design, illustrations, and animations. A sleek, minimal site built for freelancers and startups looking for creative services. It features custom interactions, smooth scroll animations, and a clear service hierarchy.</p>
+        </div>
+      </div>
+
+      <div class="showcase-tags reveal-up">
+        <span>Webflow</span><span>Portfolio</span><span>Animations</span><span>Illustrations</span>
+      </div>
+
+      <a href="https://my-portfolio-174a4e.webflow.io" target="_blank" rel="noopener" class="showcase-link reveal-up magnetic">
+        <span data-i18n="projects.viewlive">View Live</span>
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+
+      <div class="showcase-gallery">
+        <div class="gallery-item gallery-item--browser reveal-up">
+          <div class="browser-chrome">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+            <span class="browser-url">my-portfolio.webflow.io</span>
+          </div>
+          <div class="browser-body lavender-placeholder">
+            <div class="lavender-placeholder-inner">
+              <i class="fas fa-palette"></i>
+              <span>Webflow Portfolio</span>
+              <p data-i18n="websites.visit">Visit the live site to see the full design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Monzer Aziz</span>
+      <div class="footer-links"><a href="mailto:monzeraziz01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js?v=3"></script>
+  <script src="js/core.js?v=3"></script>
+  <script src="js/pages.js?v=3"></script>
+</body>
+</html>
