@@ -487,6 +487,7 @@
 [data-color="neon"] .detail-hero::before{background:linear-gradient(180deg,#020a18 0%,var(--bg) 100%)}
 [data-color="cyan"] .detail-hero::before{background:linear-gradient(180deg,#020818 0%,var(--bg) 100%)}
 [data-color="purple"] .detail-hero::before{background:linear-gradient(180deg,#0c0618 0%,var(--bg) 100%)}
+[data-color="mint"] .detail-hero::before{background:linear-gradient(180deg,#020f08 0%,var(--bg) 100%)}
 
 #detail-canvas{position:absolute;inset:0;z-index:0}
 
@@ -504,6 +505,7 @@
 [data-color="neon"] .detail-num{color:rgba(0,212,255,.08)}
 [data-color="cyan"] .detail-num{color:rgba(0,212,255,.08)}
 [data-color="purple"] .detail-num{color:rgba(180,110,255,.08)}
+[data-color="mint"] .detail-num{color:rgba(0,232,123,.08)}
 
 .detail-title{font-family:var(--font-h);font-size:clamp(2rem,5vw,3.5rem);
   font-weight:700;line-height:1.1;margin-bottom:1rem}
@@ -512,6 +514,7 @@
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 [data-color="cyan"] .detail-title{color:var(--cyan)}
 [data-color="purple"] .detail-title{color:var(--purple)}
+[data-color="mint"] .detail-title{color:var(--mint)}
 
 .detail-subtitle{font-size:clamp(.9rem,1.5vw,1.15rem);color:var(--text-dim);
   max-width:600px;line-height:1.6}
@@ -554,6 +557,7 @@
 [data-color="neon"] .detail-tech h3,[data-color="neon"] .detail-features h3{color:var(--cyan)}
 [data-color="cyan"] .detail-tech h3,[data-color="cyan"] .detail-features h3{color:var(--cyan)}
 [data-color="purple"] .detail-tech h3,[data-color="purple"] .detail-features h3{color:var(--purple)}
+[data-color="mint"] .detail-tech h3,[data-color="mint"] .detail-features h3{color:var(--mint)}
 
 .detail-tech-pills{display:flex;flex-wrap:wrap;gap:.5rem}
 .detail-tech-pills span{font-size:.75rem;letter-spacing:.06em;
@@ -567,6 +571,7 @@
 [data-color="neon"] .detail-features li i{color:var(--cyan)}
 [data-color="cyan"] .detail-features li i{color:var(--cyan)}
 [data-color="purple"] .detail-features li i{color:var(--purple)}
+[data-color="mint"] .detail-features li i{color:var(--mint)}
 
 /* Live button (Ya Hablas) */
 .detail-live-btn{display:inline-flex;align-items:center;gap:.8rem;
@@ -616,4 +621,40 @@
   .detail-gallery-grid{grid-template-columns:1fr}
   .detail-gallery-masonry .detail-gallery-item:nth-child(odd),
   .detail-gallery-masonry .detail-gallery-item:nth-child(even){grid-column:auto}
+}
+
+/* ============================================================
+   DEVICE MOCKUPS — Laptop & Browser Frames
+   ============================================================ */
+
+/* — Laptop Mockup — */
+.device-laptop{position:relative;max-width:100%;margin:0 auto;
+  transition:transform .5s var(--ease)}
+.device-laptop:hover{transform:translateY(-4px)}
+.device-laptop-screen{position:relative;border-radius:12px 12px 0 0;
+  border:3px solid #2a2a35;border-bottom:2px solid #2a2a35;
+  background:#1a1a22;overflow:hidden}
+.device-laptop-screen img{width:100%;display:block}
+.device-laptop-base{position:relative;width:108%;margin-left:-4%;height:16px;
+  background:linear-gradient(180deg,#2a2a35 0%,#1e1e28 100%);
+  border-radius:0 0 10px 10px}
+.device-laptop-base::before{content:'';position:absolute;left:50%;top:0;
+  transform:translateX(-50%);width:18%;height:5px;border-radius:0 0 5px 5px;
+  background:#3a3a45}
+.device-laptop-base::after{content:'';position:absolute;inset:0;
+  border-radius:0 0 10px 10px;
+  box-shadow:0 4px 20px rgba(0,0,0,.3)}
+
+/* Full-width laptop for hero sections */
+.device-laptop--hero{max-width:100%}
+.device-laptop--hero .device-laptop-screen{border-radius:10px 10px 0 0;
+  box-shadow:0 30px 80px rgba(0,0,0,.5)}
+
+/* — Gallery device frames — */
+.detail-gallery-item.device-frame{border:none;background:transparent;
+  overflow:visible}
+.detail-gallery-item.device-frame:hover{box-shadow:none}
+
+@media(max-width:768px){
+  .device-laptop-base{width:104%;margin-left:-2%;height:12px}
 }
