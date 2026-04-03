@@ -430,7 +430,8 @@
       const colors = {
         neon:   ['rgba(0,212,255,.3)','rgba(180,110,255,.2)'],
         cyan:   ['rgba(0,212,255,.3)','rgba(0,100,255,.2)'],
-        purple: ['rgba(180,110,255,.3)','rgba(255,102,170,.2)']
+        purple: ['rgba(180,110,255,.3)','rgba(255,102,170,.2)'],
+        mint:   ['rgba(0,232,123,.3)','rgba(0,212,180,.2)']
       };
       const palette = colors[color] || colors.neon;
 
@@ -494,14 +495,23 @@
     });
   }
 
-  /* ===== DETAIL BROWSER FRAME entrance ===== */
-  const browserFrame = document.querySelector('.detail-browser-frame');
-  if(browserFrame){
-    gsap.from(browserFrame, {
-      opacity:0, y:80, scale:.95, duration:1, ease:'power3.out',
-      scrollTrigger:{ trigger:browserFrame, start:'top 85%', once:true }
+  /* ===== DETAIL HERO-IMAGE BROWSER FRAME — page-load entrance ===== */
+  const heroBrowserFrame = document.querySelector('.detail-hero-image .detail-browser-frame');
+  if(heroBrowserFrame){
+    gsap.from(heroBrowserFrame, {
+      opacity:0, y:80, scale:.95, duration:1.2, ease:'power3.out',
+      delay:1.1
     });
   }
+
+  /* ===== GALLERY BROWSER FRAMES — scroll-triggered ===== */
+  const galleryBrowserFrames = document.querySelectorAll('.detail-gallery .detail-browser-frame');
+  galleryBrowserFrames.forEach(frame => {
+    gsap.from(frame, {
+      opacity:0, y:40, scale:.97, duration:.8, ease:'power3.out',
+      scrollTrigger:{ trigger:frame, start:'top 90%', once:true }
+    });
+  });
 
   /* ===== AUTO CARDS stagger ===== */
   const autoCards = document.querySelectorAll('.auto-card');
