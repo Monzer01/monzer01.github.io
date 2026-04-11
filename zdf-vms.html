@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZDF VMS — Monzer Aziz</title>
-  <meta name="description" content="ZDF VMS — a recording management dashboard by Monzer Aziz.">
+  <title>DVL — Zentrale Datenerfassung — Monzer Aziz</title>
+  <meta name="description" content="DVL — Zentrale Datenerfassung Virtuelle Medien & Studios, a centralized data management system by Monzer Aziz.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -56,8 +56,8 @@
       </a>
       <div class="detail-hero-text">
         <span class="detail-num">02</span>
-        <h1 class="detail-title" data-i18n="projects.p3.title">ZDF VMS — Recording Dashboard</h1>
-        <p class="detail-subtitle" data-i18n="zdfvms.subtitle">A centralized management system for hundreds of weekly lecture recordings</p>
+        <h1 class="detail-title" data-i18n="projects.p3.title">DVL — Zentrale Datenerfassung</h1>
+        <p class="detail-subtitle" data-i18n="zdfvms.subtitle">A centralized data management system for virtual media, studio operations, and lecture recording workflows across 7 integrated modules</p>
       </div>
       <div class="detail-meta">
         <div class="detail-meta-item">
@@ -66,7 +66,7 @@
         </div>
         <div class="detail-meta-item">
           <span class="detail-meta-label" data-i18n="detail.year">Year</span>
-          <span class="detail-meta-value">2024</span>
+          <span class="detail-meta-value">2024 – 2026</span>
         </div>
         <div class="detail-meta-item">
           <span class="detail-meta-label" data-i18n="detail.status">Status</span>
@@ -76,19 +76,11 @@
     </div>
   </header>
 
-  <!-- HERO IMAGE -->
+  <!-- HERO IMAGE — All 3 devices mockup -->
   <section class="detail-hero-image">
     <div class="container">
-      <div class="detail-browser-frame reveal-up">
-        <div class="browser-chrome">
-          <span class="browser-dot red"></span>
-          <span class="browser-dot yellow"></span>
-          <span class="browser-dot green"></span>
-          <span class="browser-url">fom-vms.internal</span>
-        </div>
-        <div class="detail-browser-body">
-          <img src="Assets/some of my work/ZDF/Bild (2).jpg" alt="ZDF VMS Dashboard" loading="lazy">
-        </div>
+      <div class="reveal-up" style="text-align:center">
+        <img src="Assets/some of my work/ZDF/all_3_zdf_app.png" alt="DVL — Zentrale Datenerfassung on laptop, tablet and phone" loading="eager" style="width:100%;max-width:1100px;display:inline-block;border-radius:var(--radius)">
       </div>
     </div>
   </section>
@@ -99,30 +91,30 @@
       <div class="detail-info-grid">
         <div class="detail-description reveal-up">
           <h2 data-i18n="detail.about">About this Project</h2>
-          <p data-i18n="zdfvms.desc1">A centralized management system I built for FOM Hochschule to handle hundreds of weekly lecture recordings. The dashboard features three distinct views — main overview, recording detail (CMP), and room/studio detail (STM) — with advanced filtering by date, time, type, studio, and attendance status.</p>
-          <p data-i18n="zdfvms.desc2">It integrates with Panopto and Moodle, showing real-time recording status, documentation tracking, and feedback loop management. The system replaced manual spreadsheet workflows and dramatically reduced errors.</p>
+          <p data-i18n="zdfvms.desc1">A centralized data management system I designed and built for FOM Hochschule's virtual media and studio department. The platform — "Zentrale Datenerfassung Virtuelle Medien & Studios" — unifies 7 integrated modules: VL-AZ (lecture recording processing), CMP (content & media production), StM (studio management), SP (study platforms), QvL (qualification for virtual teaching), KI (AI & automation), and VMS (media & studios). It replaced fragmented spreadsheet workflows with a single, real-time dashboard.</p>
+          <p data-i18n="zdfvms.desc2">The system manages hundreds of weekly lecture recordings end-to-end — from Zoom permission assignment and Panopto upload tracking to Moodle course linking and escalation workflows. It features a full CRM with detailed views for each event (Veranstaltung, Lehrender, Kurs-Info, CMP & STM details), studio supervisor feedback integration, documentation tracking, and automated notifications for missing recordings or expired deadlines.</p>
         </div>
         <div class="detail-sidebar reveal-up">
           <div class="detail-tech">
             <h3 data-i18n="detail.stack">Tech Stack</h3>
             <div class="detail-tech-pills">
+              <span>Django / Python</span>
               <span>HTML / CSS / JS</span>
-              <span>Python</span>
               <span>Panopto API</span>
               <span>Moodle Integration</span>
-              <span>Data Filtering</span>
-              <span>Real-time Status</span>
+              <span>Zoom API</span>
+              <span>Power BI</span>
             </div>
           </div>
           <div class="detail-features">
             <h3 data-i18n="detail.features">Key Features</h3>
             <ul>
-              <li><i class="fas fa-th-large"></i> <span data-i18n="zdfvms.f1">3 distinct dashboard views</span></li>
-              <li><i class="fas fa-filter"></i> <span data-i18n="zdfvms.f2">Advanced multi-filter system</span></li>
-              <li><i class="fas fa-sync-alt"></i> <span data-i18n="zdfvms.f3">Real-time recording status</span></li>
-              <li><i class="fas fa-plug"></i> <span data-i18n="zdfvms.f4">Panopto & Moodle integration</span></li>
-              <li><i class="fas fa-file-alt"></i> <span data-i18n="zdfvms.f5">Documentation tracking</span></li>
-              <li><i class="fas fa-comment-dots"></i> <span data-i18n="zdfvms.f6">Feedback loop management</span></li>
+              <li><i class="fas fa-th-large"></i> <span data-i18n="zdfvms.f1">7 integrated modules (VL-AZ, CMP, StM, SP, QvL, KI, VMS)</span></li>
+              <li><i class="fas fa-address-card"></i> <span data-i18n="zdfvms.f2">Full CRM with detailed event & lecturer views</span></li>
+              <li><i class="fas fa-sync-alt"></i> <span data-i18n="zdfvms.f3">Real-time recording & upload status tracking</span></li>
+              <li><i class="fas fa-plug"></i> <span data-i18n="zdfvms.f4">Panopto, Moodle & Zoom integration</span></li>
+              <li><i class="fas fa-exclamation-triangle"></i> <span data-i18n="zdfvms.f5">Escalation workflows & deadline tracking</span></li>
+              <li><i class="fas fa-comment-dots"></i> <span data-i18n="zdfvms.f6">Studio feedback loop & documentation</span></li>
             </ul>
           </div>
         </div>
@@ -135,43 +127,25 @@
     <div class="container">
       <h2 class="detail-gallery-title reveal-up" data-i18n="detail.screenshots">Screenshots</h2>
       <div class="detail-gallery-grid">
+
+        <!-- Laptop mockup -->
         <div class="detail-gallery-item device-frame reveal-up">
-          <div class="detail-browser-frame">
-            <div class="browser-chrome">
-              <span class="browser-dot red"></span>
-              <span class="browser-dot yellow"></span>
-              <span class="browser-dot green"></span>
-              <span class="browser-url">fom-vms.internal</span>
-            </div>
-            <div class="detail-browser-body">
-              <img src="Assets/some of my work/ZDF/Bild (2).jpg" alt="ZDF VMS — Dark Theme Dashboard" loading="lazy">
-            </div>
-          </div>
-          <div class="detail-gallery-caption" data-i18n="zdfvms.cap1">Main dashboard (dark mode) — all modules at a glance</div>
+          <img src="Assets/some of my work/ZDF/laptop_zdf_app.png" alt="DVL — Dashboard with 7 modules on laptop" loading="lazy" style="width:100%;display:block">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap1">Dashboard — 7 integrated modules for media & studio data management</div>
         </div>
+
+        <!-- Tablet mockup -->
         <div class="detail-gallery-item device-frame reveal-up">
-          <div class="device-laptop">
-            <div class="device-laptop-screen">
-              <img src="Assets/some of my work/ZDF/Bild (3).jpg" alt="ZDF VMS — Light Theme Dashboard" loading="lazy">
-            </div>
-            <div class="device-laptop-base"></div>
-          </div>
-          <div class="detail-gallery-caption" data-i18n="zdfvms.cap2">Dashboard (light mode) — clean, accessible interface</div>
+          <img src="Assets/some of my work/ZDF/tab_zdf_app.png" alt="DVL — CRM detail view on tablet" loading="lazy" style="width:100%;display:block">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap2">CRM detail view — event, lecturer, course info, CMP & STM details at a glance</div>
         </div>
+
+        <!-- Phone mockup -->
         <div class="detail-gallery-item device-frame reveal-up">
-          <div class="detail-browser-frame">
-            <div class="browser-chrome">
-              <span class="browser-dot red"></span>
-              <span class="browser-dot yellow"></span>
-              <span class="browser-dot green"></span>
-              <span class="browser-url">fom-vms.internal/stm</span>
-            </div>
-            <div class="detail-browser-body">
-              <img src="Assets/some of my work/ZDF/gesamtübersicht.jpg" alt="ZDF VMS — University Centers Overview" loading="lazy">
-            </div>
-          </div>
-          <div class="detail-gallery-caption" data-i18n="zdfvms.cap3">Studio supervisor overview — all university centers and daily lectures</div>
+          <img src="Assets/some of my work/ZDF/phone_zdf_app_1.png" alt="DVL — Contact detail card on mobile" loading="lazy" style="width:100%;display:block">
+          <div class="detail-gallery-caption" data-i18n="zdfvms.cap3">Contact detail card — status, contact info & monthly hours on mobile</div>
         </div>
+
       </div>
     </div>
   </section>
