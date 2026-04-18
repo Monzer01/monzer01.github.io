@@ -298,6 +298,13 @@
   const savedStyle = localStorage.getItem('site-style');
   if(savedStyle) root.setAttribute('data-style', savedStyle);
 
+  function updateFavicon(){
+    const fav = document.getElementById('favicon');
+    if(!fav) return;
+    fav.href = root.getAttribute('data-style') === 'outline'
+      ? 'Assets/favicon-outline.svg' : 'Assets/favicon.svg';
+  }
+
   if(styleBtn){
     styleBtn.addEventListener('click', () => {
       const current = root.getAttribute('data-style');
@@ -309,6 +316,7 @@
         root.setAttribute('data-style', 'outline');
         localStorage.setItem('site-style', 'outline');
       }
+      updateFavicon();
       setTimeout(() => root.classList.remove('theme-transitioning'), 600);
     });
   }

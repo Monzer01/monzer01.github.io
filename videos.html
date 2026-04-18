@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/pages.css">
   <link rel="stylesheet" href="css/outline-theme.css">
-  <script>(function(){var s=localStorage.getItem('site-style');if(s)document.documentElement.setAttribute('data-style',s)})()</script>
+  <link rel="icon" id="favicon" href="Assets/favicon.svg" type="image/svg+xml">
+  <script>(function(){var s=localStorage.getItem('site-style');if(s){document.documentElement.setAttribute('data-style',s);var f=document.getElementById('favicon');if(f)f.href=s==='outline'?'Assets/favicon-outline.svg':'Assets/favicon.svg'}})()</script>
 </head>
 <body>
 
