@@ -1,0 +1,1144 @@
+/* ============================================================
+   OUTLINE ILLUSTRATION THEME
+   Activated via  html[data-style="outline"]
+   Transforms the dark neon portfolio into a clean,
+   line-art / outline-illustration aesthetic.
+   ============================================================ */
+
+/* -------- Scoping selector -------- */
+[data-style="outline"]{
+
+  /* === palette === */
+  --bg:           #faf8f5;
+  --bg2:          #f0ece6;
+  --bg-glass:     rgba(250,248,245,.92);
+  --text:         #1a1a1a;
+  --text-dim:     #666;
+  --accent:       #1a1a1a;
+  --neon:         #1a1a1a;
+  --warm:         #1a1a1a;
+  --mint:         #1a1a1a;
+  --cyan:         #1a1a1a;
+  --purple:       #1a1a1a;
+  --lavender:     #1a1a1a;
+  --orange:       #1a1a1a;
+  --border:       rgba(26,26,26,.18);
+  --outline-w:    2px;
+  --doodle:       #1a1a1a;
+}
+
+/* ---- general body + reset ---- */
+[data-style="outline"] body{
+  background:var(--bg);
+  color:var(--text);
+}
+[data-style="outline"] html{
+  background:var(--bg);
+}
+[data-style="outline"] ::selection{
+  background:#1a1a1a;
+  color:#faf8f5;
+}
+
+/* ---- hide heavy dark-mode decorations ---- */
+[data-style="outline"] .noise,
+[data-style="outline"] .cursor-glow,
+[data-style="outline"] .hero-blob,
+[data-style="outline"] .hero-lines,
+[data-style="outline"] .hero-scan-line,
+[data-style="outline"] .neon-symbols,
+[data-style="outline"] .floating-browsers,
+[data-style="outline"] .film-strip,
+[data-style="outline"] .cinema-grain,
+[data-style="outline"] .cinema-vignette,
+[data-style="outline"] .cinema-scanlines,
+[data-style="outline"] .cinema-bars,
+[data-style="outline"] .cinema-timecode,
+[data-style="outline"] .page-hero-grid,
+[data-style="outline"] .page-hero-dots,
+[data-style="outline"] .cat-bg,
+[data-style="outline"] .app-card-glow,
+[data-style="outline"] .mint-cursor-trail,
+[data-style="outline"] #hero-canvas,
+[data-style="outline"] #neon-canvas,
+[data-style="outline"] #wave-canvas,
+[data-style="outline"] #film-canvas,
+[data-style="outline"] #matrix-canvas,
+[data-style="outline"] #detail-canvas{
+  display:none !important;
+}
+
+/* ---- cursor — pencil ---- */
+[data-style="outline"]{ cursor:none; }
+[data-style="outline"] a,
+[data-style="outline"] button,
+[data-style="outline"] input,
+[data-style="outline"] textarea,
+[data-style="outline"] select,
+[data-style="outline"] [role="button"]{ cursor:none !important; }
+
+[data-style="outline"] .cursor{
+  background:transparent;
+  mix-blend-mode:normal;
+  width:32px;height:32px;
+  border:none;
+  border-radius:0;
+  /* Monochrome outline pencil, tilted for right-handed writing */
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect x='10' y='2' width='6' height='22' rx='.8' fill='none' stroke='%231a1a1a' stroke-width='1.3'/%3E%3Crect x='10' y='2' width='6' height='3.5' rx='.8' fill='none' stroke='%231a1a1a' stroke-width='1.3'/%3E%3Cline x1='10' y1='5.5' x2='16' y2='5.5' stroke='%231a1a1a' stroke-width='.8'/%3E%3Cpolygon points='10,24 16,24 13,30' fill='none' stroke='%231a1a1a' stroke-width='1.3' stroke-linejoin='round'/%3E%3Cpolygon points='12,28 14,28 13,30' fill='%231a1a1a'/%3E%3Cline x1='13' y1='6' x2='13' y2='23' stroke='%231a1a1a' stroke-width='.4' stroke-dasharray='2 2' opacity='.3'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-size:contain;
+}
+[data-style="outline"] .cursor.expand{
+  width:32px;height:32px;
+  background-color:transparent;
+  border:none;
+  border-radius:0;
+  animation:none;
+}
+[data-style="outline"] .cursor.expand .cursor-text{
+  opacity:0;
+}
+[data-style="outline"] .cursor-text{
+  color:var(--text);
+  font-family:var(--font-h);
+  font-weight:600;
+  letter-spacing:.06em;
+}
+
+
+/* ---- page transition — sketchy wipe ---- */
+[data-style="outline"] .transition-slice{
+  background:var(--bg);
+  border-right:2px solid var(--text);
+}
+
+/* ============================================================
+   OUTLINE KEYFRAME ANIMATIONS
+   ============================================================ */
+
+/* Continuous gentle hand-drawn wobble for orbs */
+@keyframes outline-wobble{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  25%{transform:translateY(-6px) rotate(1.5deg)}
+  50%{transform:translateY(2px) rotate(-1deg)}
+  75%{transform:translateY(-3px) rotate(.5deg)}
+}
+
+/* Sketchy dash crawl along borders */
+@keyframes outline-dash-crawl{
+  to{stroke-dashoffset:-40}
+}
+
+/* Float + subtle rotate  — like paper cutouts */
+@keyframes outline-float{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(-12px) rotate(2deg)}
+}
+
+/* Drawing-in stroke for borders */
+@keyframes outline-draw-in{
+  from{stroke-dashoffset:200}
+  to{stroke-dashoffset:0}
+}
+
+/* Wiggle for interactive elements */
+@keyframes outline-wiggle{
+  0%,100%{transform:rotate(0deg)}
+  25%{transform:rotate(-1.5deg)}
+  75%{transform:rotate(1.5deg)}
+}
+
+/* Pencil scribble underline */
+@keyframes outline-scribble{
+  0%{background-position:0 0}
+  100%{background-position:120px 0}
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+[data-style="outline"] .nav{
+  background:transparent;
+}
+[data-style="outline"] .nav.scrolled{
+  background:var(--bg-glass);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--border);
+}
+/* nav links — sketchy underline instead of solid bar */
+[data-style="outline"] .nav-link{
+  color:var(--text-dim);
+}
+[data-style="outline"] .nav-link:hover,
+[data-style="outline"] .nav-link.active{
+  color:var(--text);
+}
+[data-style="outline"] .nav-link::after{
+  background:none;
+  height:4px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='4'%3E%3Cpath d='M0 2 Q8 0 15 2.5 T30 2 T45 2.5 T60 2' fill='none' stroke='%231a1a1a' stroke-width='1.3'/%3E%3C/svg%3E");
+  background-repeat:repeat-x;
+  background-size:60px 4px;
+}
+/* nav logo — wiggle on hover */
+[data-style="outline"] .nav-logo:hover .logo-m{
+  animation:outline-wiggle .4s ease;
+}
+[data-style="outline"] .logo-dot{
+  color:var(--text);
+}
+[data-style="outline"] .lang-btn{
+  border-color:var(--border);
+}
+[data-style="outline"] .lang-btn:hover{
+  border-color:var(--text);
+}
+[data-style="outline"] .lang-opt.active{
+  color:var(--text);
+}
+[data-style="outline"] .hamburger span{
+  background:var(--text);
+}
+
+/* mobile nav */
+[data-style="outline"] .mobile-nav{
+  background:var(--bg);
+}
+[data-style="outline"] .mobile-nav a{
+  color:var(--text-dim);
+}
+[data-style="outline"] .mobile-nav a:hover{
+  color:var(--text);
+}
+
+/* ---- style toggle button — sketchy ring ---- */
+[data-style="outline"] .style-toggle{
+  border:var(--outline-w) solid var(--text);
+  color:var(--text);
+}
+[data-style="outline"] .style-toggle:hover{
+  animation:outline-wiggle .3s ease;
+}
+
+/* ============================================================
+   HOME — HERO
+   ============================================================ */
+[data-style="outline"] .hero{
+  background:var(--bg);
+}
+
+/* orbs become dashed outline pills — with wobble animation */
+[data-style="outline"] .orb{
+  border:var(--outline-w) dashed var(--text);
+  background:transparent;
+  backdrop-filter:none;
+  color:var(--text);
+  font-weight:500;
+  animation:outline-wobble 5s ease-in-out infinite !important;
+}
+/* stagger the orbs so they feel hand-placed */
+[data-style="outline"] .orb-1{animation-delay:0s !important;animation-duration:4.5s !important}
+[data-style="outline"] .orb-2{animation-delay:.3s !important;animation-duration:5.2s !important}
+[data-style="outline"] .orb-3{animation-delay:.8s !important;animation-duration:4.8s !important}
+[data-style="outline"] .orb-4{animation-delay:1.2s !important;animation-duration:5.5s !important}
+[data-style="outline"] .orb-5{animation-delay:.5s !important;animation-duration:4.2s !important}
+[data-style="outline"] .orb-6{animation-delay:1.5s !important;animation-duration:5.8s !important}
+[data-style="outline"] .orb-7{animation-delay:.2s !important;animation-duration:5s !important}
+[data-style="outline"] .orb-8{animation-delay:1s !important;animation-duration:4.6s !important}
+
+/* hero name — solid dark, no gradient */
+[data-style="outline"] .char{
+  background:none !important;
+  -webkit-text-fill-color:var(--text) !important;
+  color:var(--text);
+}
+
+[data-style="outline"] .hero-eyebrow{
+  color:var(--text-dim);
+}
+[data-style="outline"] .eyebrow-line{
+  background:var(--text);
+}
+
+/* hero role */
+[data-style="outline"] .role-word{
+  color:var(--text);
+  font-weight:600;
+}
+[data-style="outline"] .role-divider{
+  color:var(--text-dim);
+}
+[data-style="outline"] .role-tagline{
+  color:var(--text-dim);
+}
+
+/* CTAs — outline style with hand-drawn hover */
+[data-style="outline"] .hero-cta{
+  background:transparent;
+  border:var(--outline-w) solid var(--text);
+  color:var(--text);
+  transition:background .3s,color .3s,transform .3s,box-shadow .3s;
+  position:relative;
+}
+[data-style="outline"] .hero-cta:hover{
+  background:var(--text);
+  color:var(--bg);
+  box-shadow:4px 4px 0 var(--text);
+  transform:translate(-2px,-2px);
+}
+[data-style="outline"] .hero-cta--ghost{
+  border:var(--outline-w) dashed var(--text);
+}
+[data-style="outline"] .hero-cta--ghost:hover{
+  background:var(--text);
+  color:var(--bg);
+  border-style:solid;
+  box-shadow:4px 4px 0 var(--text);
+  transform:translate(-2px,-2px);
+}
+
+/* scroll wheel — hand-drawn style + pencil bounce */
+[data-style="outline"] .scroll-wheel{
+  border:var(--outline-w) solid var(--text);
+  border-radius:10px;
+}
+[data-style="outline"] .scroll-wheel::after{
+  background:var(--text);
+  border-radius:2px;
+  animation:outline-pencil-bounce 2s ease-in-out infinite !important;
+}
+@keyframes outline-pencil-bounce{
+  0%,100%{transform:translateY(0);opacity:1}
+  40%{transform:translateY(8px);opacity:.5}
+  60%{transform:translateY(6px);opacity:.6}
+  80%{transform:translateY(10px);opacity:.3}
+}
+
+/* ============================================================
+   HOME — ABOUT
+   ============================================================ */
+[data-style="outline"] .about-big{
+  background:none !important;
+  -webkit-text-fill-color:var(--text) !important;
+  color:var(--text);
+}
+[data-style="outline"] .about-col p{
+  color:var(--text-dim);
+}
+
+/* stats — sketchy offset shadow on hover */
+[data-style="outline"] .stat{
+  background:transparent;
+  border:var(--outline-w) solid var(--text);
+  border-radius:var(--radius);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+[data-style="outline"] .stat:hover{
+  border-color:var(--text);
+  background:rgba(26,26,26,.02);
+  transform:translate(-3px,-3px) !important;
+  box-shadow:5px 5px 0 var(--text);
+}
+[data-style="outline"] .stat-num{
+  color:var(--text);
+}
+[data-style="outline"] .stat-plus{
+  color:var(--text);
+}
+
+/* ============================================================
+   HOME — CATEGORY CARDS — hand-drawn hover
+   ============================================================ */
+[data-style="outline"] .cat-card{
+  border:var(--outline-w) solid var(--text);
+  background:var(--bg);
+  transition:transform .35s ease,box-shadow .35s ease,background .3s;
+}
+[data-style="outline"] .cat-card:hover{
+  border-color:var(--text);
+  background:rgba(26,26,26,.02);
+  transform:translate(-4px,-4px);
+  box-shadow:6px 6px 0 var(--text);
+}
+[data-style="outline"] .cat-num{
+  color:var(--text-dim);
+}
+[data-style="outline"] .cat-title,
+[data-style="outline"] [data-theme="neon"] .cat-title,
+[data-style="outline"] [data-theme="mint"] .cat-title,
+[data-style="outline"] [data-theme="warm"] .cat-title,
+[data-style="outline"] [data-theme="matrix"] .cat-title{
+  color:var(--text) !important;
+}
+[data-style="outline"] .cat-sub{
+  color:var(--text-dim);
+}
+[data-style="outline"] .cat-arrow{
+  border:var(--outline-w) solid var(--text);
+}
+[data-style="outline"] .cat-card:hover .cat-arrow,
+[data-style="outline"] [data-theme="neon"]  .cat-card:hover .cat-arrow,
+[data-style="outline"] [data-theme="mint"]  .cat-card:hover .cat-arrow,
+[data-style="outline"] [data-theme="warm"]  .cat-card:hover .cat-arrow,
+[data-style="outline"] [data-theme="matrix"] .cat-card:hover .cat-arrow{
+  background:var(--text) !important;
+  border-color:var(--text) !important;
+  color:var(--bg) !important;
+}
+[data-style="outline"] .cat-preview{
+  opacity:.06;
+  filter:grayscale(1) contrast(1.5);
+}
+[data-style="outline"] .cat-card:hover .cat-preview{
+  opacity:.1;
+}
+[data-style="outline"] .preview-placeholder{
+  color:var(--text) !important;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+[data-style="outline"] .contact-email{
+  color:var(--text);
+}
+[data-style="outline"] .form-field input,
+[data-style="outline"] .form-field textarea{
+  color:var(--text);
+}
+[data-style="outline"] .form-field label{
+  color:var(--text-dim);
+}
+[data-style="outline"] .field-line{
+  background:var(--border);
+}
+[data-style="outline"] .field-line::after{
+  background:var(--text);
+}
+[data-style="outline"] .form-field input:focus~label,
+[data-style="outline"] .form-field input:not(:placeholder-shown)~label,
+[data-style="outline"] .form-field textarea:focus~label,
+[data-style="outline"] .form-field textarea:not(:placeholder-shown)~label{
+  color:var(--text);
+}
+[data-style="outline"] .submit-btn{
+  border:var(--outline-w) solid var(--text);
+  color:var(--text);
+  transition:background .3s,color .3s,transform .3s,box-shadow .3s;
+}
+[data-style="outline"] .submit-btn:hover{
+  background:var(--text);
+  color:var(--bg);
+  transform:translate(-3px,-3px) scale(1) !important;
+  box-shadow:5px 5px 0 var(--text);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+[data-style="outline"] .footer{
+  border-top:var(--outline-w) solid var(--text);
+}
+[data-style="outline"] .footer-inner{
+  color:var(--text-dim);
+}
+[data-style="outline"] .footer-links a{
+  color:var(--text-dim);
+}
+[data-style="outline"] .footer-links a:hover{
+  color:var(--text);
+}
+
+/* ============================================================
+   PAGE HEROES — all sub-pages
+   ============================================================ */
+[data-style="outline"] .page-hero,
+[data-style="outline"] .neon-theme,
+[data-style="outline"] .mint-theme,
+[data-style="outline"] .cinema-theme,
+[data-style="outline"] .matrix-theme{
+  background:var(--bg) !important;
+}
+[data-style="outline"] .page-hero-title,
+[data-style="outline"] .neon-theme .page-hero-title,
+[data-style="outline"] .mint-theme .page-hero-title,
+[data-style="outline"] .cinema-theme .page-hero-title,
+[data-style="outline"] .matrix-theme .page-hero-title{
+  background:none !important;
+  -webkit-text-fill-color:var(--text) !important;
+  color:var(--text) !important;
+}
+[data-style="outline"] .page-hero-sub{
+  color:var(--text-dim);
+}
+
+/* neon label / glitch — flatten */
+[data-style="outline"] .glitch::before,
+[data-style="outline"] .glitch::after{
+  display:none;
+}
+[data-style="outline"] .glitch{
+  background:none !important;
+  -webkit-text-fill-color:var(--text) !important;
+}
+[data-style="outline"] .neon-label,
+[data-style="outline"] .label-bracket{
+  color:var(--text) !important;
+}
+[data-style="outline"] .neon-stats{
+  color:var(--text-dim);
+}
+[data-style="outline"] .neon-stats strong{
+  color:var(--text);
+}
+[data-style="outline"] .neon-stat-sep{
+  color:var(--border);
+}
+
+/* mint label */
+[data-style="outline"] .label-line{
+  background:var(--text);
+}
+
+/* cinema label */
+[data-style="outline"] .cinema-label{
+  color:var(--text) !important;
+}
+[data-style="outline"] .rec-dot{
+  background:var(--text);
+}
+[data-style="outline"] .cinema-tools-row .ct{
+  border-color:var(--border);
+  color:var(--text);
+}
+
+/* matrix / terminal label */
+[data-style="outline"] .terminal-prompt{
+  color:var(--text);
+}
+[data-style="outline"] .blink-cursor{
+  color:var(--text);
+}
+[data-style="outline"] .typewriter{
+  color:var(--text);
+}
+
+/* ============================================================
+   PROJECT SHOWCASE (websites.html)
+   ============================================================ */
+[data-style="outline"] .project-showcase{
+  border-top:var(--outline-w) solid var(--text);
+}
+[data-style="outline"] .showcase-num,
+[data-style="outline"] [data-accent] .showcase-num{
+  color:rgba(26,26,26,.1) !important;
+}
+[data-style="outline"] .showcase-header h2,
+[data-style="outline"] [data-accent] h2{
+  color:var(--text) !important;
+}
+[data-style="outline"] .showcase-tags span{
+  border-color:var(--text);
+  color:var(--text-dim);
+}
+[data-style="outline"] [data-accent] .showcase-tags span:hover{
+  border-color:var(--text) !important;
+  color:var(--text) !important;
+}
+[data-style="outline"] .showcase-link,
+[data-style="outline"] [data-accent] .showcase-link{
+  color:var(--text) !important;
+}
+
+/* gallery items */
+[data-style="outline"] .gallery-item{
+  border:var(--outline-w) solid var(--text);
+  border-radius:var(--radius);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+[data-style="outline"] .gallery-item:hover{
+  transform:translate(-4px,-4px) !important;
+  box-shadow:6px 6px 0 var(--text);
+}
+[data-style="outline"] .gallery-caption{
+  background:var(--bg2);
+  color:var(--text-dim);
+}
+
+/* browser chrome */
+[data-style="outline"] .browser-chrome{
+  background:var(--bg2);
+  border-bottom:1px solid var(--border);
+}
+[data-style="outline"] .browser-dot.red,
+[data-style="outline"] .browser-dot.yellow,
+[data-style="outline"] .browser-dot.green{
+  background:transparent;
+  border:var(--outline-w) solid var(--text);
+}
+[data-style="outline"] .browser-url{
+  color:var(--text-dim);
+}
+[data-style="outline"] .mint-placeholder,
+[data-style="outline"] .lavender-placeholder{
+  background:var(--bg2) !important;
+}
+[data-style="outline"] .mint-placeholder-inner,
+[data-style="outline"] .lavender-placeholder-inner{
+  color:var(--text) !important;
+}
+[data-style="outline"] .mint-placeholder-inner p,
+[data-style="outline"] .lavender-placeholder-inner p{
+  color:var(--text-dim);
+}
+
+/* ============================================================
+   APP CARDS (webapps.html)
+   ============================================================ */
+[data-style="outline"] .app-projects-title{
+  background:none !important;
+  -webkit-text-fill-color:var(--text) !important;
+}
+[data-style="outline"] .app-projects-eyebrow{
+  color:var(--text-dim);
+}
+[data-style="outline"] .app-card{
+  border:none;
+}
+[data-style="outline"] .app-card-border{
+  border:var(--outline-w) solid var(--text) !important;
+  border-radius:1.2rem;
+}
+[data-style="outline"] .app-card:hover .app-card-border{
+  border-color:var(--text) !important;
+}
+[data-style="outline"] .app-card-inner{
+  background:var(--bg);
+}
+[data-style="outline"] .app-card-visual img{
+  filter:grayscale(1) contrast(1.2);
+}
+[data-style="outline"] .app-card:hover .app-card-visual img{
+  filter:grayscale(1) contrast(1.4) brightness(1.05);
+}
+[data-style="outline"] .app-card-overlay{
+  background:linear-gradient(180deg,transparent 50%,rgba(250,248,245,.85));
+}
+[data-style="outline"] .app-card-num,
+[data-style="outline"] [data-color] .app-card-num{
+  color:rgba(26,26,26,.08) !important;
+}
+[data-style="outline"] .app-card-tags span{
+  border-color:var(--text);
+  color:var(--text-dim);
+}
+[data-style="outline"] [data-color]:hover .app-card-tags span{
+  border-color:var(--text) !important;
+  color:var(--text) !important;
+}
+[data-style="outline"] .app-card-title,
+[data-style="outline"] [data-color] .app-card-title{
+  color:var(--text) !important;
+}
+[data-style="outline"] .app-card-desc{
+  color:var(--text-dim);
+}
+[data-style="outline"] .app-card-footer{
+  border-top-color:var(--border);
+}
+[data-style="outline"] .app-card-cta,
+[data-style="outline"] [data-color] .app-card-cta{
+  color:var(--text) !important;
+}
+[data-style="outline"] .app-card-live{
+  color:var(--text) !important;
+}
+
+/* ============================================================
+   VIDEO PAGE
+   ============================================================ */
+[data-style="outline"] .video-intro h2{
+  color:var(--text);
+}
+[data-style="outline"] .vid-cap{
+  background:transparent;
+  border:var(--outline-w) solid var(--text);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+[data-style="outline"] .vid-cap:hover{
+  border-color:var(--text);
+  transform:translate(-3px,-3px) !important;
+  box-shadow:5px 5px 0 var(--text);
+}
+[data-style="outline"] .vid-cap-icon{
+  color:var(--text);
+}
+[data-style="outline"] .video-tools h3{
+  color:var(--text);
+}
+[data-style="outline"] .tool-pills span{
+  border-color:var(--text);
+  color:var(--text-dim);
+}
+[data-style="outline"] .tool-pills span:hover{
+  border-color:var(--text);
+  color:var(--text);
+}
+[data-style="outline"] .cta-link{
+  color:var(--text);
+}
+
+/* ============================================================
+   AUTOMATION PAGE
+   ============================================================ */
+[data-style="outline"] .terminal-block{
+  background:var(--bg);
+  border:var(--outline-w) solid var(--text);
+}
+[data-style="outline"] .terminal-header{
+  background:var(--bg2);
+  border-bottom:1px solid var(--border);
+}
+[data-style="outline"] .terminal-dot.red,
+[data-style="outline"] .terminal-dot.yellow,
+[data-style="outline"] .terminal-dot.green{
+  background:transparent;
+  border:var(--outline-w) solid var(--text);
+}
+[data-style="outline"] .terminal-title{
+  color:var(--text-dim);
+}
+[data-style="outline"] .terminal-line{
+  color:var(--text);
+}
+[data-style="outline"] .t-prompt{
+  color:var(--text);
+}
+[data-style="outline"] .t-cmd{
+  color:var(--text);
+}
+[data-style="outline"] .terminal-output{
+  color:var(--text-dim);
+  border-left-color:var(--border);
+}
+
+[data-style="outline"] .auto-card{
+  background:transparent;
+  border:var(--outline-w) solid var(--text);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+[data-style="outline"] [data-accent] .auto-card:hover{
+  border-color:var(--text) !important;
+  transform:translate(-3px,-3px) !important;
+  box-shadow:5px 5px 0 var(--text);
+}
+[data-style="outline"] .auto-card-icon,
+[data-style="outline"] [data-accent] .auto-card-icon{
+  color:var(--text) !important;
+}
+[data-style="outline"] .auto-card-tags span{
+  border-color:var(--text);
+}
+[data-style="outline"] .auto-card-stat{
+  border-top-color:var(--border);
+}
+[data-style="outline"] .auto-stat-num,
+[data-style="outline"] [data-accent] .auto-stat-num{
+  color:var(--text) !important;
+}
+
+/* ============================================================
+   DETAIL PAGES
+   ============================================================ */
+[data-style="outline"] .detail-hero{
+  background:var(--bg);
+}
+[data-style="outline"] .detail-hero::before,
+[data-style="outline"] [data-color] .detail-hero::before{
+  background:var(--bg) !important;
+}
+[data-style="outline"] .detail-back{
+  color:var(--text-dim);
+}
+[data-style="outline"] .detail-back:hover{
+  color:var(--text);
+}
+[data-style="outline"] .detail-num,
+[data-style="outline"] [data-color] .detail-num{
+  color:rgba(26,26,26,.06) !important;
+}
+[data-style="outline"] .detail-title,
+[data-style="outline"] [data-color] .detail-title,
+[data-style="outline"] [data-color="neon"] .detail-title{
+  background:none !important;
+  -webkit-text-fill-color:var(--text) !important;
+  color:var(--text) !important;
+}
+[data-style="outline"] .detail-subtitle{
+  color:var(--text-dim);
+}
+[data-style="outline"] .detail-meta-label{
+  color:var(--text-dim);
+}
+[data-style="outline"] .detail-status-live{
+  color:var(--text);
+}
+[data-style="outline"] .detail-status-live i{
+  color:var(--text);
+}
+[data-style="outline"] .detail-status-internal{
+  color:var(--text-dim);
+}
+
+/* hero image / browser frame */
+[data-style="outline"] .detail-browser-frame{
+  border:var(--outline-w) solid var(--text);
+  box-shadow:8px 8px 0 var(--text);
+  transition:transform .4s ease,box-shadow .4s ease;
+}
+[data-style="outline"] .detail-browser-frame:hover{
+  transform:translate(-3px,-3px) !important;
+  box-shadow:11px 11px 0 var(--text);
+}
+
+/* info grid */
+[data-style="outline"] .detail-description h2{
+  color:var(--text);
+}
+[data-style="outline"] .detail-description p{
+  color:var(--text-dim);
+}
+[data-style="outline"] .detail-tech h3,
+[data-style="outline"] .detail-features h3,
+[data-style="outline"] [data-color] .detail-tech h3,
+[data-style="outline"] [data-color] .detail-features h3{
+  color:var(--text) !important;
+}
+[data-style="outline"] .detail-tech-pills span{
+  border-color:var(--text);
+  color:var(--text-dim);
+}
+[data-style="outline"] .detail-features li{
+  color:var(--text-dim);
+}
+[data-style="outline"] .detail-features li i,
+[data-style="outline"] [data-color] .detail-features li i{
+  color:var(--text) !important;
+}
+
+/* live button */
+[data-style="outline"] .detail-live-btn{
+  border-color:var(--text);
+  color:var(--text);
+  transition:background .3s,color .3s,transform .3s,box-shadow .3s;
+}
+[data-style="outline"] .detail-live-btn:hover{
+  background:var(--text);
+  color:var(--bg) !important;
+  transform:translate(-3px,-3px);
+  box-shadow:5px 5px 0 var(--text);
+}
+
+/* gallery */
+[data-style="outline"] .detail-gallery-title{
+  color:var(--text);
+}
+[data-style="outline"] .detail-gallery-item{
+  border:var(--outline-w) solid var(--text);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+[data-style="outline"] .detail-gallery-item:hover{
+  transform:translate(-4px,-4px) !important;
+  box-shadow:6px 6px 0 var(--text);
+}
+[data-style="outline"] .detail-gallery-caption{
+  background:linear-gradient(transparent,rgba(250,248,245,.9));
+  color:var(--text);
+}
+
+/* next project */
+[data-style="outline"] .detail-next{
+  border-top:var(--outline-w) solid var(--text);
+}
+[data-style="outline"] .detail-next-label{
+  color:var(--text-dim);
+}
+[data-style="outline"] .detail-next-title{
+  color:var(--text);
+}
+
+/* ============================================================
+   DEVICE MOCKUPS
+   ============================================================ */
+[data-style="outline"] .device-laptop-screen{
+  border-color:var(--text);
+  background:var(--bg2);
+}
+[data-style="outline"] .device-laptop-base{
+  background:var(--text);
+}
+[data-style="outline"] .device-laptop-base::before{
+  background:var(--bg2);
+}
+
+/* ============================================================
+   IMAGES — outline illustration filter
+   ============================================================ */
+[data-style="outline"] .detail-browser-body img,
+[data-style="outline"] .detail-gallery-item img,
+[data-style="outline"] .device-laptop-screen img,
+[data-style="outline"] .gallery-item img,
+[data-style="outline"] .app-card-visual img,
+[data-style="outline"] .cat-preview img{
+  filter:grayscale(1) contrast(1.15) brightness(1.05);
+  transition:filter .6s var(--ease);
+}
+
+/* ============================================================
+   DOODLE DECORATIONS — SVG background accents
+   ============================================================ */
+
+/* Squiggle underline on section titles — animated crawl */
+[data-style="outline"] .section-title,
+[data-style="outline"] .detail-gallery-title,
+[data-style="outline"] .contact-heading{
+  position:relative;
+  display:inline-block;
+}
+[data-style="outline"] .section-title::after,
+[data-style="outline"] .detail-gallery-title::after,
+[data-style="outline"] .contact-heading::after{
+  content:'';
+  position:absolute;
+  left:0;bottom:-8px;
+  width:100%;height:8px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='8'%3E%3Cpath d='M0 4 Q10 0 20 4 T40 4 T60 4 T80 4 T100 4 T120 4' fill='none' stroke='%231a1a1a' stroke-width='1.5'/%3E%3C/svg%3E") repeat-x;
+  background-size:120px 8px;
+  animation:outline-scribble 3s linear infinite;
+}
+
+/* Doodle stars near hero content */
+[data-style="outline"] .hero-content::before{
+  content:'';
+  position:absolute;
+  top:-40px;right:-60px;
+  width:40px;height:40px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M20 2 L22 16 L36 14 L24 20 L32 32 L20 24 L8 32 L16 20 L4 14 L18 16 Z' fill='none' stroke='%231a1a1a' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat center;
+  opacity:.3;
+  pointer-events:none;
+  animation:outline-float 6s ease-in-out infinite;
+}
+[data-style="outline"] .hero-content::after{
+  content:'';
+  position:absolute;
+  bottom:20px;left:-80px;
+  width:30px;height:30px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Ccircle cx='15' cy='15' r='12' fill='none' stroke='%231a1a1a' stroke-width='1.2' stroke-dasharray='3 4'/%3E%3C/svg%3E") no-repeat center;
+  opacity:.25;
+  pointer-events:none;
+  animation:outline-float 7s ease-in-out infinite;
+  animation-delay:1s;
+}
+
+/* Doodle decorations around page heroes */
+[data-style="outline"] .page-hero-content::before{
+  content:'';
+  position:absolute;
+  top:10px;right:-50px;
+  width:36px;height:36px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Cpath d='M18 3 L20 14 L31 12 L22 18 L28 28 L18 22 L8 28 L14 18 L5 12 L16 14 Z' fill='none' stroke='%231a1a1a' stroke-width='1'/%3E%3C/svg%3E") no-repeat center;
+  opacity:.2;
+  pointer-events:none;
+  animation:outline-float 5s ease-in-out infinite;
+}
+[data-style="outline"] .page-hero-content::after{
+  content:'';
+  position:absolute;
+  bottom:0;left:-40px;
+  width:24px;height:24px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='%231a1a1a' stroke-width='1' stroke-dasharray='2 3'/%3E%3C/svg%3E") no-repeat center;
+  opacity:.2;
+  pointer-events:none;
+  animation:outline-float 6.5s ease-in-out infinite reverse;
+}
+
+/* Doodle accents around detail hero */
+[data-style="outline"] .detail-hero-content::before{
+  content:'';
+  position:absolute;
+  top:60px;right:20px;
+  width:44px;height:44px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M22 4 Q25 8 28 4' fill='none' stroke='%231a1a1a' stroke-width='1' stroke-linecap='round'/%3E%3Cpath d='M10 16 Q14 12 18 16' fill='none' stroke='%231a1a1a' stroke-width='1' stroke-linecap='round'/%3E%3Cpath d='M26 28 Q30 24 34 28' fill='none' stroke='%231a1a1a' stroke-width='1' stroke-linecap='round'/%3E%3Ccircle cx='8' cy='34' r='3' fill='none' stroke='%231a1a1a' stroke-width='1'/%3E%3Ccircle cx='36' cy='10' r='2' fill='none' stroke='%231a1a1a' stroke-width='1'/%3E%3C/svg%3E") no-repeat center;
+  opacity:.2;
+  pointer-events:none;
+  animation:outline-float 8s ease-in-out infinite;
+}
+
+/* Small decorative circles on stat boxes */
+[data-style="outline"] .stat::before{
+  content:'';
+  position:absolute;
+  top:-6px;right:-6px;
+  width:14px;height:14px;
+  border:var(--outline-w) solid var(--text);
+  border-radius:50%;
+  background:var(--bg);
+}
+[data-style="outline"] .stat{
+  position:relative;
+}
+
+/* Doodle arrow on cat-card hover */
+[data-style="outline"] .cat-card::after{
+  content:'';
+  position:absolute;
+  top:20px;right:20px;
+  width:50px;height:50px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Cpath d='M5 45 Q20 10 45 5' fill='none' stroke='%231a1a1a' stroke-width='1.2' stroke-dasharray='4 3'/%3E%3Cpath d='M38 2 L46 5 L42 12' fill='none' stroke='%231a1a1a' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat center;
+  opacity:0;
+  transition:opacity .4s;
+  pointer-events:none;
+  z-index:5;
+}
+[data-style="outline"] .cat-card:hover::after{
+  opacity:.3;
+}
+
+/* ============================================================
+   PEN TRAIL CANVAS — replaces cursor glow in outline mode
+   ============================================================ */
+.outline-pen-trail{
+  position:fixed;inset:0;z-index:10001;pointer-events:none;
+  display:none;
+}
+[data-style="outline"] .outline-pen-trail{
+  display:block;
+}
+
+/* ---- outline hover highlight overlay ---- */
+.outline-hover-highlight{
+  position:absolute;
+  inset:-4px;
+  pointer-events:none;
+  z-index:2;
+}
+.outline-hover-highlight canvas{
+  width:100%;height:100%;
+  display:block;
+}
+
+/* ============================================================
+   TAG PILLS — hand-drawn hover wiggle
+   ============================================================ */
+[data-style="outline"] .showcase-tags span:hover,
+[data-style="outline"] .auto-card-tags span:hover,
+[data-style="outline"] .app-card-tags span:hover,
+[data-style="outline"] .detail-tech-pills span:hover,
+[data-style="outline"] .tool-pills span:hover{
+  animation:outline-wiggle .3s ease;
+}
+
+/* ============================================================
+   LINK ARROWS — sketchy bounce on hover
+   ============================================================ */
+[data-style="outline"] .showcase-link:hover i,
+[data-style="outline"] .cta-link:hover i,
+[data-style="outline"] .contact-email:hover i,
+[data-style="outline"] .detail-next-link:hover i,
+[data-style="outline"] .detail-back:hover i,
+[data-style="outline"] .app-card:hover .app-card-cta i{
+  animation:outline-arrow-bounce .5s ease;
+}
+@keyframes outline-arrow-bounce{
+  0%,100%{transform:translateX(0)}
+  30%{transform:translateX(8px)}
+  60%{transform:translateX(3px)}
+}
+
+/* ============================================================
+   APP CARD — full sketchy offset on hover
+   ============================================================ */
+[data-style="outline"] .app-card{
+  transition:transform .35s ease;
+}
+[data-style="outline"] .app-card:hover{
+  transform:translate(-4px,-4px) !important;
+}
+[data-style="outline"] .app-card:hover .app-card-border{
+  box-shadow:6px 6px 0 var(--text);
+}
+
+/* ============================================================
+   OUTLINE BORDERS — sketchy offset shadow on hover
+   ============================================================ */
+[data-style="outline"] .auto-card,
+[data-style="outline"] .vid-cap,
+[data-style="outline"] .gallery-item,
+[data-style="outline"] .detail-gallery-item{
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+}
+
+/* ============================================================
+   STYLE TOGGLE BUTTON
+   ============================================================ */
+.style-toggle{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;height:34px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  font-size:.85rem;
+  transition:border-color .3s,transform .3s,background .3s;
+  position:relative;
+  color:var(--text-dim);
+}
+.style-toggle:hover{
+  border-color:var(--accent);
+  transform:scale(1.1);
+}
+.style-toggle .toggle-icon-default,
+.style-toggle .toggle-icon-outline{
+  position:absolute;
+  transition:opacity .3s,transform .3s;
+}
+.style-toggle .toggle-icon-outline{
+  opacity:0;
+  transform:rotate(-90deg);
+}
+
+/* when outline is active, swap icons */
+[data-style="outline"] .style-toggle .toggle-icon-default{
+  opacity:0;
+  transform:rotate(90deg);
+}
+[data-style="outline"] .style-toggle .toggle-icon-outline{
+  opacity:1;
+  transform:rotate(0deg);
+}
+
+/* ============================================================
+   SMOOTH TRANSITION WHEN TOGGLING THEME
+   Only active during the toggle, removed after to avoid
+   fighting GSAP animations.
+   ============================================================ */
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after{
+  transition:background .5s ease, color .5s ease, border-color .5s ease,
+             box-shadow .5s ease, fill .5s ease, stroke .5s ease !important;
+}
+
+/* ============================================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================================ */
+@media(max-width:768px){
+  [data-style="outline"] .hero-content::before,
+  [data-style="outline"] .hero-content::after,
+  [data-style="outline"] .page-hero-content::before,
+  [data-style="outline"] .page-hero-content::after,
+  [data-style="outline"] .detail-hero-content::before{
+    display:none;
+  }
+}

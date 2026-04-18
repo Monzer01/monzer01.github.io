@@ -379,6 +379,7 @@
     const items = gallery.querySelectorAll('.gallery-item');
     gsap.from(items, {
       opacity:0, y:60, scale:.95, duration:.8, stagger:.15, ease:'power3.out',
+      immediateRender:false,
       scrollTrigger:{ trigger:gallery, start:'top 80%', once:true }
     });
   });
@@ -388,6 +389,7 @@
   if(appCards.length){
     gsap.from(appCards, {
       opacity:0, y:80, scale:.92, duration:1, stagger:.2, ease:'power3.out',
+      immediateRender:false,
       scrollTrigger:{ trigger:'.app-cards-grid', start:'top 80%', once:true }
     });
 
@@ -491,6 +493,7 @@
     const items = detailGallery.querySelectorAll('.detail-gallery-item');
     gsap.from(items, {
       opacity:0, y:60, scale:.95, duration:.8, stagger:.15, ease:'power3.out',
+      immediateRender:false,
       scrollTrigger:{ trigger:detailGallery, start:'top 80%', once:true }
     });
   }
@@ -509,6 +512,7 @@
   galleryBrowserFrames.forEach(frame => {
     gsap.from(frame, {
       opacity:0, y:40, scale:.97, duration:.8, ease:'power3.out',
+      immediateRender:false,
       scrollTrigger:{ trigger:frame, start:'top 90%', once:true }
     });
   });
@@ -518,6 +522,7 @@
   if(autoCards.length){
     gsap.from(autoCards, {
       opacity:0, y:50, duration:.7, stagger:.12, ease:'power3.out',
+      immediateRender:false,
       scrollTrigger:{ trigger:'.auto-grid', start:'top 80%', once:true }
     });
   }
@@ -527,6 +532,7 @@
   if(vidCaps.length){
     gsap.from(vidCaps, {
       opacity:0, y:40, duration:.6, stagger:.1, ease:'power3.out',
+      immediateRender:false,
       scrollTrigger:{ trigger:'.video-capabilities', start:'top 80%', once:true }
     });
   }

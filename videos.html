@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/outline-theme.css">
+  <script>(function(){var s=localStorage.getItem('site-style');if(s)document.documentElement.setAttribute('data-style',s)})()</script>
 </head>
 <body>
 
@@ -19,6 +21,7 @@
   </div>
   <div class="cursor" aria-hidden="true"><span class="cursor-text"></span></div>
   <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas class="outline-pen-trail" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
 
   <nav class="nav">
@@ -31,6 +34,10 @@
       <a href="videos.html" class="nav-link active" data-i18n="nav.videos">Videos</a>
     </div>
     <div class="nav-right">
+      <button class="style-toggle" aria-label="Toggle style theme">
+        <i class="fas fa-pen-nib toggle-icon-default"></i>
+        <i class="fas fa-display toggle-icon-outline"></i>
+      </button>
       <button class="lang-btn" aria-label="Toggle language">
         <span class="lang-opt active" data-lang="en">EN</span><span class="lang-sep">/</span><span class="lang-opt" data-lang="de">DE</span>
       </button>

@@ -586,7 +586,8 @@
 .detail-gallery-title{font-family:var(--font-h);font-size:clamp(1.5rem,3vw,2rem);
   font-weight:600;margin-bottom:3rem}
 
-.detail-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.detail-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;
+  align-items:center}
 .detail-gallery-masonry .detail-gallery-item:nth-child(odd){grid-column:1}
 .detail-gallery-masonry .detail-gallery-item:nth-child(even){grid-column:2}
 
